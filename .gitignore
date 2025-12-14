@@ -1,0 +1,9 @@
+__pycache__
+venv
+*.pyc
+downloads/
+credentials.json
+serviceAccountKey.json
+*.session
+*.session-journal
+sessions/
