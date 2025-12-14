@@ -14,6 +14,12 @@ BOT_TOKEN = "8517308010:AAFNVBIH5Mo3m8htxZ6JvFkfwI-U0gZJKWg"
 FIREBASE_BUCKET = "twistedbrody-9d163.firebasestorage.app"
 CREDENTIALS_PATH = "serviceAccountKey.json"
 
+# [RAILWAY/CLOUD SUPPORT]
+# Si existe la variable de entorno FIREBASE_KEY, creamos el archivo json
+if "FIREBASE_KEY" in os.environ:
+    with open(CREDENTIALS_PATH, "w") as f:
+        f.write(os.environ["FIREBASE_KEY"])
+
 # Inicializar Firebase
 if not firebase_admin._apps:
     cred = credentials.Certificate(CREDENTIALS_PATH)

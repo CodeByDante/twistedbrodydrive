@@ -7,3 +7,4 @@ serviceAccountKey.json
 *.session
 *.session-journal
 sessions/
+railway_variables.txt
